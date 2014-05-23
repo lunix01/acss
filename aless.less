@@ -1,0 +1,74 @@
+@import "var";
+@import "reset";
+
+.clearfix{
+  .dis;zoom:1;
+  &:after{.dis;content:" ";clear:both;font-size:0;height:0;visibility:hidden;}
+}
+
+/*.w统一宽度980*/
+.w{.margin(0,auto);.width(@wwidth);}
+
+.m0p0{margin:0;padding:0;}  // 建议外部就不用了，上面元素都重置用了
+
+.margin(@top){margin-top:@top;margin-right:@top;margin-bottom:@top;margin-left:@top;}
+.margin(@top,@right){margin-top:@top;margin-right:@right;margin-bottom:@top;margin-left:@right;}
+.margin(@top,@right,@bottom){margin-top:@top;margin-right:@right;margin-bottom:@bottom;margin-left:@right;}
+.margin(@top,@right,@bottom,@left){margin-top:@top;margin-right:@right;margin-bottom:@bottom;margin-left:@left;}
+.mt(@margin-top){margin-top:@margin-top;}
+.mb(@margin-bottom){margin-bottom:@margin-bottom;}
+.ml(@margin-left){margin-left:@margin-left;}
+.mr(@margin-right){margin-right:@margin-right;}
+
+.padding(@top){padding-top:@top;padding-right:@top;padding-bottom:@top;padding-left:@top;}
+.padding(@top,@right){padding-top:@top;padding-right:@right;padding-bottom:@top;padding-left:@right;}
+.padding(@top,@right,@bottom){padding-top:@top;padding-right:@right;padding-bottom:@bottom;padding-left:@right;}
+.padding(@top,@right,@bottom,@left){padding-top:@top;padding-right:@right;padding-bottom:@bottom;padding-left:@left;}
+.pt(@padding-top){padding-top:@padding-top;}
+.pb(@padding-bottom){padding-bottom:@padding-bottom;}
+.pl(@padding-left){padding-left:@padding-left;}
+.pr(@padding-right){padding-right:@padding-right;}
+
+.posr{position:relative;}
+.posa{position:absolute;}
+.posf{position:fixed;}
+.top(@top){top:@top;}
+.right(@right){right:@right;}
+.bottom(@bottom){bottom:@bottom;}
+.left(@left){left:@left;}
+
+.fl{float:left;}
+.fr{float:right;}
+
+.ff-en-base{font-family:helvetica,arial,verdana,sans-serif;}
+.ff-cn-base{font-family:"microsoft yahei","新宋体";}
+.fz-em-base{font-size:0.812em/1.231;}
+.fz-px-base{font-size:14px;}
+.fz(@size){font-size:@size;}
+
+.width(@width){width:@width;}
+.height(@height){height: @height;}
+.w-h(@width){width:@width;height:@width;}
+.w-h(@width,@height){width:@width;height:@height;}
+
+.line-height(@height){height:@height;line-height:@height;}
+.line-height(@height,@lineheight){height:@height;line-height:@lineheight;}
+
+.tal{text-align:left;}
+.tac{text-align:center;}
+
+.dis{display:block;}
+.undis{display:none;}
+
+.tdn{text-decoration:none;}
+.tdu{text-decoration:underline;}
+
+.background(@color){background:@color}
+.color(@colorv){color:@colorv;}
+.bold{font-weight:bold;}
+.pointer{cursor:pointer;}
+.ov-h{overflow:hidden;}
+.z-index(@c){z-index:@c}
+
+/*.w统一宽度980*/
+.w{.margin(0,auto);.width(@wwidth);}
