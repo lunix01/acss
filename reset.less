@@ -4,12 +4,15 @@
 //html{} 最新版本less不需要加
 @charset "utf-8";
 html,body{.height(100%);}
-html,body,div,dl,dt,dd,ul,ol,li,p,h1,h2,h3,h4,h5,h6,span,iframe,blockquote,pre,code,a,address,big,cite,code,del,em,img,ins,small,strong,var,b,u,i,form,button,input,textarea,th,td,fieldset,label,legend{.m0p0;}
+html,body,div,dl,dt,dd,ul,ol,li,p,h1,h2,h3,h4,h5,h6,span,iframe,blockquote,pre,code,a,address,
+  big,cite,code,del,em,img,ins,small,strong,var,b,u,i,form,button,input,textarea,th,td,fieldset,
+  label,legend{.m0p0;border:0 none;outline:0;vertical-align:baseline;}
+:focus{outline:0;} 
 body{.ff-en-base;.fz-em-base;}
 ul,ol,li{list-style:none outside none;}
-p,h1,h2,h3,h4,h5,h6{.fz-px-base;}
-h1,h2,h3,h4,h5,h6{font-weight:normal;}
-img{border:0 none;vertical-align:middle;}
+p,h1,h2,h3,h4,h5,h6{.margin(20px,0);.fz-px-base;font-weight:normal;}
+img{.tdn;border:0 none;vertical-align:middle;}
+table{border-collapse:separate;border-spacing:0;}
 a{
 	&:link,&:visited{.tdn;}
 	&:hover{.tdu;}
