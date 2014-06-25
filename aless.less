@@ -60,16 +60,45 @@
 .tdn{text-decoration:none;}
 .tdu{text-decoration:underline;}
 
-.bold{font-weight:bold;}
-.pointer{cursor:pointer;}
 .ov-h{overflow:hidden;}
 .ov-a{overflow:auto;}
 .v-v{visibility:visible;}
 .v-h{visibility:hidden;}
 
+/*border*/
+.border(@border){border:@border}
+.outline(@outline){outline:@outline}
+//border-radius
+.radius(@radius){border-radius:@radius;}
+.radius(@topleft,@topright){border-top-left-radius:@topleft;border-top-right-radius:@topright;border-bottom-right-radius:@topleft;border-bottom-left-radius:@topright;}
+.radius(@topleft,@topright,@bottomleft){border-top-left-radius:@topleft;border-top-right-radius:@topright;border-bottom-right-radius:@bottomright;border-bottom-left-radius:@topright;}
+.radius(@topleft,@topright,@bottomleft,@bottomright){border-top-left-radius:@topleft;border-top-right-radius:@topright;border-bottom-right-radius:@bottomright;border-bottom-left-radius:@bottomleft;}
+.radiustl(@topl){border-top-left-radius:@topl;}
+.radiustr(@topr){border-top-right-radius:@topr;}
+.radiusbl(@bottoml){border-bottom-left-radius:@bottoml;}
+.radiusbr(@bottomr){border-bottom-right-radius:@bottomr;}
+//border-radius more
+.radius-t(@top){border-top-left-radius:@top;border-top-right-radius:@top;}
+.radius-t(@topl,@topr){border-top-left-radius:@topl;border-top-right-radius:@topr;}
+.radius-b(@bottom){border-bottom-left-radius:@bottom;border-bottom-right-radius:@bottom;}
+.radius-b(@bottoml,@bottomr){border-bottom-left-radius:@bottoml;border-bottom-right-radius:@bottomr;}
+.radius-l(@left){border-top-left-radius:@left;border-bottom-left-radius:@left;}
+.radius-l(@topl,@bottoml){border-top-left-radius:@topl;border-bottom-left-radius:@bottoml;}
+.radius-r(@right){border-top-right-radius:@right;border-bottom-right-radius:@right;}
+.radius-r(@topr,@bottomr){border-top-right-radius:@topr;border-bottom-right-radius:@bottomr;}
+//box-shadow
+.box-shadow(@boxshadow){box-shadow:@boxshadow}
+
 .background(@bg){background:@bg}
 .color(@colorv){color:@colorv;}
+.opacity(@opacity){opacity:@opacity}
 .z-index(@c){z-index:@c}
+
+.bold{font-weight:bold;}
+.pointer{cursor:pointer;}
+
+.text-shadow(@textshadow){text-shadow:@textshadow}
+.rotation(@rotation){rotation:@rotation}
 
 /*.w统一宽度980*/
 .w{.margin(0,auto);.width(@wwidth);}
