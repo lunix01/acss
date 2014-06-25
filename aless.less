@@ -6,7 +6,7 @@
   &:after{.dis;.fz(0);.height(0);content:" ";clear:both;visibility:hidden;}
 }
 
-.m0p0{margin:0;padding:0;}
+.m0p0{margin:0;padding:0;}  // 建议外部就不用了，元素重置用
 
 .margin(@top){margin-top:@top;margin-right:@top;margin-bottom:@top;margin-left:@top;}
 .margin(@top,@right){margin-top:@top;margin-right:@right;margin-bottom:@top;margin-left:@right;}
@@ -60,13 +60,15 @@
 .tdn{text-decoration:none;}
 .tdu{text-decoration:underline;}
 
-.background(@color){background:@color}
-.color(@colorv){color:@colorv;}
 .bold{font-weight:bold;}
 .pointer{cursor:pointer;}
 .ov-h{overflow:hidden;}
+.ov-a{overflow:auto;}
+
+.background(@bg){background:@bg}
+.color(@colorv){color:@colorv;}
 .z-index(@c){z-index:@c}
 
+/*.w统一宽度980*/
 .w{.margin(0,auto);.width(@wwidth);}
-.w(@width){.margin(0,auto);.width(@width);}
-
+.w(@wwwidth){.margin(0,auto);.width(@wwwidth);}
