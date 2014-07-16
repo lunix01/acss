@@ -65,9 +65,15 @@
 .v-v{visibility:visible;}
 .v-h{visibility:hidden;}
 
+.fsn{font-style: normal;}
+.fsi{font-style: italic;}  //建议直接用i
+.fso{font-style: oblique;}
+
 /*border*/
-.border(@border){border:@border}
-.outline(@outline){outline:@outline}
+.border(@border){border:@border;}
+.border(@b1,@ss){border:@b1 @ss;}
+.border(@b1,@ss,@cc){border:@b1 @ss @cc;}
+.outline(@outline){outline:@outline;}
 //border-radius
 .radius(@radius){border-radius:@radius;}
 .radius(@topleft,@topright){border-top-left-radius:@topleft;border-top-right-radius:@topright;border-bottom-right-radius:@topleft;border-bottom-left-radius:@topright;}
@@ -87,7 +93,8 @@
 .radius-r(@right){border-top-right-radius:@right;border-bottom-right-radius:@right;}
 .radius-r(@topr,@bottomr){border-top-right-radius:@topr;border-bottom-right-radius:@bottomr;}
 //box-shadow
-.box-shadow(@boxshadow){box-shadow:@boxshadow}
+.box-shadow(@box-shadow,@bsc){box-shadow:@box-shadow @box-shadow @box-shadow @bsc;}
+.box-shadow(@bs1,@bs1,@bs1,@bsc){box-shadow:@bs1 @bs1 @bs1 @bsc;}
 
 .background(@bg){background:@bg}
 .color(@colorv){color:@colorv;}
@@ -97,8 +104,13 @@
 .bold{font-weight:bold;}
 .pointer{cursor:pointer;}
 
-.text-shadow(@textshadow){text-shadow:@textshadow}
-.rotation(@rotation){rotation:@rotation}
+.text-shadow(@text-shadow,@tsc){text-shadow:@text-shadow @text-shadow @text-shadow @tsc;}
+.text-shadow(@ts1,@ts2,@ts3,@tsc){text-shadow:@ts1 @ts2 @ts3 @tsc;}
+.rotation(@rotation){rotation:@rotation;}
+
+.transition(@transition){transition:@transition;}
+.transition(@property,@duration,@timing,@delay){transition:@property @duration @timing @delay;}
+.transform(@transform){transform:@transform;}
 
 /*.w统一宽度980*/
 .w{.margin(0,auto);.width(@wwidth);}
