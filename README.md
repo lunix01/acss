@@ -3,9 +3,9 @@
   一个小小的less框架……
 
 ###bower
-  bower install aless
+  如：bower install aless
 
-###引用示例：
+###引用示例
   @import "aless/aless";
   或
   @import "aless/aless.less";
