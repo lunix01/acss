@@ -6,21 +6,19 @@
   &:after{.dis;.fz(0);.height(0);.v-h;content:" ";clear:both;}
 }
 
-.m0p0{margin:0;padding:0;}  // 建议外部就不用了，元素重置用
-
-.margin(@top){margin-top:@top;margin-right:@top;margin-bottom:@top;margin-left:@top;}
-.margin(@top,@right){margin-top:@top;margin-right:@right;margin-bottom:@top;margin-left:@right;}
-.margin(@top,@right,@bottom){margin-top:@top;margin-right:@right;margin-bottom:@bottom;margin-left:@right;}
-.margin(@top,@right,@bottom,@left){margin-top:@top;margin-right:@right;margin-bottom:@bottom;margin-left:@left;}
+.margin(@margin){margin:@margin;}
+.margin(@top,@right){margin:@top @right @top @right;}
+.margin(@top,@right,@bottom){margin:@top @right @bottom}
+.margin(@top,@right,@bottom,@left){margin:@top @right @bottom @left;}
 .mt(@margin-top){margin-top:@margin-top;}
 .mb(@margin-bottom){margin-bottom:@margin-bottom;}
 .ml(@margin-left){margin-left:@margin-left;}
 .mr(@margin-right){margin-right:@margin-right;}
 
-.padding(@top){padding-top:@top;padding-right:@top;padding-bottom:@top;padding-left:@top;}
-.padding(@top,@right){padding-top:@top;padding-right:@right;padding-bottom:@top;padding-left:@right;}
-.padding(@top,@right,@bottom){padding-top:@top;padding-right:@right;padding-bottom:@bottom;padding-left:@right;}
-.padding(@top,@right,@bottom,@left){padding-top:@top;padding-right:@right;padding-bottom:@bottom;padding-left:@left;}
+.padding(@padding){padding:@padding;}
+.padding(@top,@right){padding:@top @right @top @right;}
+.padding(@top,@right,@bottom){padding:@top @right @bottom @right;}
+.padding(@top,@right,@bottom,@left){padding:@top @right @bottom @left;}
 .pt(@padding-top){padding-top:@padding-top;}
 .pb(@padding-bottom){padding-bottom:@padding-bottom;}
 .pl(@padding-left){padding-left:@padding-left;}
@@ -37,25 +35,36 @@
 .fl{float:left;}
 .fr{float:right;}
 
-.ff-en-base{font-family:helvetica,arial,verdana,sans-serif;}
-.ff-cn-base{font-family:"microsoft yahei","新宋体";}
-.fz-em-base{font-size:0.812em/1.231;}
-.fz-px-base{font-size:14px;}
+.ff-en{font-family:helvetica,arial,tahoma,sans-serif;}
+.ff-cn{font-family:"宋体";}
+.ff(@ff){font-family:@ff;}
+.fz-em{.fz(0.83em);.line-height(1.2);}
+.fz-px{.fz(14px);.line-height(16px);}
 .fz(@size){font-size:@size;}
+//font-style
+.fsn{font-style:normal;}
+.fsi{font-style:italic;}
+.fso{font-style:oblique;}
+//font-weight
+.bold{font-weight:bold;}
+.fwb{font-weight:bold;}
+.fw(@fw){font-weight:@fw;}
+
+.line-height(@height){line-height:@height;}
+.line-height(@height,@lineheight){height:@height;line-height:@lineheight;}
 
 .width(@width){width:@width;}
 .height(@height){height: @height;}
 .w-h(@width){width:@width;height:@width;}
 .w-h(@width,@height){width:@width;height:@height;}
 
-.line-height(@height){height:@height;line-height:@height;}
-.line-height(@height,@lineheight){height:@height;line-height:@lineheight;}
-
 .tal{text-align:left;}
 .tac{text-align:center;}
 
 .dis{display:block;}
 .undis{display:none;}
+.dis-ib{display:inline-block;}
+.dis-i{display:inline;}
 
 .tdn{text-decoration:none;}
 .tdu{text-decoration:underline;}
@@ -65,9 +74,10 @@
 .v-v{visibility:visible;}
 .v-h{visibility:hidden;}
 
-.fsn{font-style: normal;}
-.fsi{font-style: italic;}  //建议直接用i
-.fso{font-style: oblique;}
+.background(@bg){background:@bg}
+.color(@colorv){color:@colorv;}
+.opacity(@opacity){opacity:@opacity}
+.z-index(@c){z-index:@c}
 
 /*border*/
 .border(@border){border:@border;}
@@ -83,34 +93,22 @@
 .radiustr(@topr){border-top-right-radius:@topr;}
 .radiusbl(@bottoml){border-bottom-left-radius:@bottoml;}
 .radiusbr(@bottomr){border-bottom-right-radius:@bottomr;}
-//border-radius more
-.radius-t(@top){border-top-left-radius:@top;border-top-right-radius:@top;}
-.radius-t(@topl,@topr){border-top-left-radius:@topl;border-top-right-radius:@topr;}
-.radius-b(@bottom){border-bottom-left-radius:@bottom;border-bottom-right-radius:@bottom;}
-.radius-b(@bottoml,@bottomr){border-bottom-left-radius:@bottoml;border-bottom-right-radius:@bottomr;}
-.radius-l(@left){border-top-left-radius:@left;border-bottom-left-radius:@left;}
-.radius-l(@topl,@bottoml){border-top-left-radius:@topl;border-bottom-left-radius:@bottoml;}
-.radius-r(@right){border-top-right-radius:@right;border-bottom-right-radius:@right;}
-.radius-r(@topr,@bottomr){border-top-right-radius:@topr;border-bottom-right-radius:@bottomr;}
-//box-shadow
-.box-shadow(@box-shadow,@bsc){box-shadow:@box-shadow @box-shadow @box-shadow @bsc;}
-.box-shadow(@bs1,@bs1,@bs1,@bsc){box-shadow:@bs1 @bs1 @bs1 @bsc;}
 
-.background(@bg){background:@bg}
-.color(@colorv){color:@colorv;}
-.opacity(@opacity){opacity:@opacity}
-.z-index(@c){z-index:@c}
-
-.bold{font-weight:bold;}
-.pointer{cursor:pointer;}
+.box-shadow(@bsxy,@bs,@bsc){box-shadow:@bsxy @bsxy @bs @bsc;}
+.box-shadow(@bsxy,@bs1,@bs2,@bsc){box-shadow:@bsxy @bsxy @bs1 @bs2 @bsc;}
+.box-shadow(@bsx,@bsy,@bs,@bsc){box-shadow:@bsx @bsy @bs @bsc;}
+.box-shadow(@bsx,@bsy,@bs1,@bs2,@bsc){box-shadow:@bsx @bsy @bs1 @bs2 @bsc;}
 
 .text-shadow(@text-shadow,@tsc){text-shadow:@text-shadow @text-shadow @text-shadow @tsc;}
 .text-shadow(@ts1,@ts2,@ts3,@tsc){text-shadow:@ts1 @ts2 @ts3 @tsc;}
-.rotation(@rotation){rotation:@rotation;}
 
 .transition(@transition){transition:@transition;}
 .transition(@property,@duration,@timing,@delay){transition:@property @duration @timing @delay;}
 .transform(@transform){transform:@transform;}
+
+.rotation(@rotation){rotation:@rotation;}
+
+.pointer{cursor:pointer;}
 
 /*.w统一宽度980*/
 .w{.margin(0,auto);.width(@wwidth);}
