@@ -117,9 +117,8 @@
 .vam{vertical-align:middle;}
 .vat{vertical-align:top;}
 .vab{vertical-align:bottom;}
-.list-style(@list-style){list-style:@list-style outside none;}
-.list-style(@ls1,@ls2){list-style:@ls1 @ls2 none;}
-.list-style(@ls1,@ls2,@ls3,){list-style:@arguments;}
+// list-style(type position image)
+.list-style(@ls1:disc,@ls2:outside,@ls3:none,){list-style:@arguments;}
 
 /*.w统一宽度980*/
 .w{.margin(0,auto);.width(@wwidth);}
