@@ -24,6 +24,8 @@
 .pl(@padding-left){padding-left:@padding-left;}
 .pr(@padding-right){padding-right:@padding-right;}
 
+.fl{float:left;}
+.fr{float:right;}
 .posr{position:relative;}
 .posa{position:absolute;}
 .posf{position:fixed;}
@@ -32,11 +34,10 @@
 .bottom(@bottom){bottom:@bottom;}
 .left(@left){left:@left;}
 
-.fl{float:left;}
-.fr{float:right;}
-
-.ff-en{font-family:helvetica,arial,tahoma,sans-serif;}
-.ff-cn{font-family:"宋体";}
+.font(@font){font:@font}
+.ff-en{font-family:tahoma,verdana,"Helvetica Neue",helvetica,arial,sans-serif;}
+.ff-serif{font-family:georgia,Garamond,"Times New Roman",Times,serif;}
+.ff-cn{font-family:"Hiragino Sans GB","宋体","华文细黑";}
 .ff(@ff){font-family:@ff;}
 .fz-em{.fz(0.83em);.line-height(1.2);}
 .fz-px{.fz(14px);.line-height(16px);}
@@ -48,6 +49,7 @@
 //font-weight
 .bold{font-weight:bold;}
 .fwb{font-weight:bold;}
+.fwn{font-weight: normal;}
 .fw(@fw){font-weight:@fw;}
 
 .line-height(@height){line-height:@height;}
@@ -57,17 +59,23 @@
 .height(@height){height: @height;}
 .w-h(@width){width:@width;height:@width;}
 .w-h(@width,@height){width:@width;height:@height;}
+.min-w(@min-w){min-width:@min-w;}
+.min-h(@min-h){min-height:@min-h;}
+.max-w(@max-w){max-width:@max-w;}
+.max-h(@max-h){max-height:@max-h;}
 
 .tal{text-align:left;}
 .tac{text-align:center;}
+.tdn{text-decoration:none;}
+.tdu{text-decoration:underline;}
+.color(@colorv){color:@colorv;}
+.text-shadow(@text-shadow,@tsc){text-shadow:@text-shadow @text-shadow @text-shadow @tsc;}
+.text-shadow(@ts1,@ts2,@ts3,@tsc){text-shadow:@ts1 @ts2 @ts3 @tsc;}
 
 .dis{display:block;}
 .undis{display:none;}
 .dis-ib{display:inline-block;}
 .dis-i{display:inline;}
-
-.tdn{text-decoration:none;}
-.tdu{text-decoration:underline;}
 
 .ov-h{overflow:hidden;}
 .ov-a{overflow:auto;}
@@ -75,7 +83,6 @@
 .v-h{visibility:hidden;}
 
 .background(@bg){background:@bg}
-.color(@colorv){color:@colorv;}
 .opacity(@opacity){opacity:@opacity}
 .z-index(@c){z-index:@c}
 
@@ -86,29 +93,33 @@
 .outline(@outline){outline:@outline;}
 //border-radius
 .radius(@radius){border-radius:@radius;}
-.radius(@topleft,@topright){border-top-left-radius:@topleft;border-top-right-radius:@topright;border-bottom-right-radius:@topleft;border-bottom-left-radius:@topright;}
-.radius(@topleft,@topright,@bottomleft){border-top-left-radius:@topleft;border-top-right-radius:@topright;border-bottom-right-radius:@bottomright;border-bottom-left-radius:@topright;}
-.radius(@topleft,@topright,@bottomleft,@bottomright){border-top-left-radius:@topleft;border-top-right-radius:@topright;border-bottom-right-radius:@bottomright;border-bottom-left-radius:@bottomleft;}
+.radius(@topleft,@topright){border-radius:@topleft @topright @topleft @topright;}
+.radius(@topleft,@topright,@bottomleft){border-radius:@topleft @topright @bottomright @topright;}
+.radius(@topleft,@topright,@bottomleft,@bottomright){border-radius:@topleft @topright @bottomright @bottomleft;}
 .radiustl(@topl){border-top-left-radius:@topl;}
 .radiustr(@topr){border-top-right-radius:@topr;}
-.radiusbl(@bottoml){border-bottom-left-radius:@bottoml;}
 .radiusbr(@bottomr){border-bottom-right-radius:@bottomr;}
+.radiusbl(@bottoml){border-bottom-left-radius:@bottoml;}
 
 .box-shadow(@bsxy,@bs,@bsc){box-shadow:@bsxy @bsxy @bs @bsc;}
 .box-shadow(@bsxy,@bs1,@bs2,@bsc){box-shadow:@bsxy @bsxy @bs1 @bs2 @bsc;}
 .box-shadow(@bsx,@bsy,@bs,@bsc){box-shadow:@bsx @bsy @bs @bsc;}
 .box-shadow(@bsx,@bsy,@bs1,@bs2,@bsc){box-shadow:@bsx @bsy @bs1 @bs2 @bsc;}
 
-.text-shadow(@text-shadow,@tsc){text-shadow:@text-shadow @text-shadow @text-shadow @tsc;}
-.text-shadow(@ts1,@ts2,@ts3,@tsc){text-shadow:@ts1 @ts2 @ts3 @tsc;}
-
 .transition(@transition){transition:@transition;}
 .transition(@property,@duration,@timing,@delay){transition:@property @duration @timing @delay;}
 .transform(@transform){transform:@transform;}
+.rotate(@degrees) {transform: rotate(@degrees);}
+.scale(@ratio) {transform: scale(@ratio);}
 
-.rotation(@rotation){rotation:@rotation;}
-
+.cursor(@cursor){cursor:@cursor;}
 .pointer{cursor:pointer;}
+.vam{vertical-align:middle;}
+.vat{vertical-align:top;}
+.vab{vertical-align:bottom;}
+.list-style(@list-style){list-style:@list-style outside none;}
+.list-style(@ls1,@ls2){list-style:@ls1 @ls2 none;}
+.list-style(@ls1,@ls2,@ls3,){list-style:@ls1 @ls2 @ls3;}
 
 /*.w统一宽度980*/
 .w{.margin(0,auto);.width(@wwidth);}
