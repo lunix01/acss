@@ -69,8 +69,9 @@
 .tdn{text-decoration:none;}
 .tdu{text-decoration:underline;}
 .color(@colorv){color:@colorv;}
-.text-shadow(@text-shadow,@tsc){text-shadow:@text-shadow @text-shadow @text-shadow @tsc;}
-.text-shadow(@ts1,@ts2,@ts3,@tsc){text-shadow:@arguments;}
+.text-shadow(@shadow,@color:@black){text-shadow:@shadow @shadow @shadow @color;}
+.text-shadow(@hv,@blur,@color){text-shadow:@hv @hv @blur @color;}
+.text-shadow(@h,@v,@blur,@color){text-shadow:@arguments;}
 
 .dis{display:block;}
 .undis{display:none;}
@@ -82,9 +83,16 @@
 .v-v{visibility:visible;}
 .v-h{visibility:hidden;}
 
+.list-style(@type:disc,@position:outside,@image:none,){list-style:@arguments;}
 .background(@bg){background:@bg}
 .opacity(@opacity){opacity:@opacity}
 .z-index(@c){z-index:@c}
+
+.cursor(@cursor){cursor:@cursor;}
+.pointer{cursor:pointer;}
+.vam{vertical-align:middle;}
+.vat{vertical-align:top;}
+.vab{vertical-align:bottom;}
 
 /*border*/
 .border(@border){border:@border;}
@@ -111,14 +119,6 @@
 .transform(@transform){transform:@transform;}
 .rotate(@degrees) {transform: rotate(@degrees);}
 .scale(@ratio) {transform: scale(@ratio);}
-
-.cursor(@cursor){cursor:@cursor;}
-.pointer{cursor:pointer;}
-.vam{vertical-align:middle;}
-.vat{vertical-align:top;}
-.vab{vertical-align:bottom;}
-// list-style(type position image)
-.list-style(@ls1:disc,@ls2:outside,@ls3:none,){list-style:@arguments;}
 
 /*.w统一宽度980*/
 .w{.margin(0,auto);.width(@wwidth);}
