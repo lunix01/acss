@@ -34,22 +34,23 @@
 .bottom(@bottom){bottom:@bottom;}
 .left(@left){left:@left;}
 
+// font-style font-variant font-weight font-size/line-height font-family
 .font(@font){font:@font}
-.ff-en{font-family:tahoma,verdana,"Helvetica Neue",helvetica,arial,sans-serif;}
-.ff-serif{font-family:georgia,Garamond,"Times New Roman",Times,serif;}
-.ff-cn{font-family:"Hiragino Sans GB","宋体","华文细黑";}
+.ff-en(){font-family:tahoma,verdana,"Helvetica Neue",helvetica,arial,sans-serif;}
+.ff-serif(){font-family:georgia,Garamond,"Times New Roman",Times,serif;}  //数字大小起伏，参差不齐效果字体 georgia
+.ff-cn(){font-family:"Hiragino Sans GB","宋体","华文细黑";}
 .ff(@ff){font-family:@ff;}
 .fz-em{.fz(0.83em);.line-height(1.2);}
 .fz-px{.fz(14px);.line-height(16px);}
 .fz(@size){font-size:@size;}
 //font-style
-.fsn{font-style:normal;}
-.fsi{font-style:italic;}
-.fso{font-style:oblique;}
+.fsn(){font-style:normal;}
+.fsi(){font-style:italic;}
+.fso(){font-style:oblique;}
 //font-weight
 .bold{font-weight:bold;}
-.fwb{font-weight:bold;}
-.fwn{font-weight: normal;}
+.fwb(){.bold;}
+.fwn(){font-weight:normal;}
 .fw(@fw){font-weight:@fw;}
 
 .line-height(@height){line-height:@height;}
@@ -87,7 +88,6 @@
 .background(@bg){background:@bg}
 .opacity(@opacity){opacity:@opacity}
 .z-index(@c){z-index:@c}
-
 .cursor(@cursor){cursor:@cursor;}
 .pointer{cursor:pointer;}
 .vam{vertical-align:middle;}
