@@ -108,6 +108,15 @@
 .radiustr(@topr){border-top-right-radius:@topr;}
 .radiusbr(@bottomr){border-bottom-right-radius:@bottomr;}
 .radiusbl(@bottoml){border-bottom-left-radius:@bottoml;}
+//border-radius more
+.radius-t(@top){border-top-left-radius:@top;border-top-right-radius:@top;}
+.radius-t(@topl,@topr){border-top-left-radius:@topl;border-top-right-radius:@topr;}
+.radius-b(@bottom){border-bottom-left-radius:@bottom;border-bottom-right-radius:@bottom;}
+.radius-b(@bottoml,@bottomr){border-bottom-left-radius:@bottoml;border-bottom-right-radius:@bottomr;}
+.radius-l(@left){border-top-left-radius:@left;border-bottom-left-radius:@left;}
+.radius-l(@topl,@bottoml){border-top-left-radius:@topl;border-bottom-left-radius:@bottoml;}
+.radius-r(@right){border-top-right-radius:@right;border-bottom-right-radius:@right;}
+.radius-r(@topr,@bottomr){border-top-right-radius:@topr;border-bottom-right-radius:@bottomr;}
 
 .box-shadow(@bsxy,@bs,@bsc){box-shadow:@bsxy @bsxy @bs @bsc;}
 .box-shadow(@bsxy,@bs1,@bs2,@bsc){box-shadow:@bsxy @bsxy @bs1 @bs2 @bsc;}
