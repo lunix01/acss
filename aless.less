@@ -67,6 +67,7 @@
 
 .tal{text-align:left;}
 .tac{text-align:center;}
+.text-align(@text-align:left){text-align:@text-align;}
 .tdn{text-decoration:none;}
 .tdu{text-decoration:underline;}
 .color(@colorv){color:@colorv;}
@@ -132,3 +133,8 @@
 /*.w统一宽度980*/
 .w{.margin(0,auto);.width(@wwidth);}
 .w(@wwwidth){.margin(0,auto);.width(@wwwidth);}
+
+.table(@backgroundcolor:#FFF,@bordercolor:#DDD,@text-align:left,@borderw:1px){
+	.width(100%);.background(@backgroundcolor);
+	th,td{.padding(8px);.border(@borderw,solid,@bordercolor);.text-align(@text-align);}
+}
