@@ -6,7 +6,7 @@
   &:after{.dis;.fz(0);.height(0);.v-h;content:" ";clear:both;}
 }
 
-.margin(@margin){margin:@margin;}
+.margin(@margin:0 auto){margin:@margin;}
 .margin(@top,@right){margin:@top @right @top @right;}
 .margin(@top,@right,@bottom){margin:@top @right @bottom}
 .margin(@top,@right,@bottom,@left){margin:@arguments;}
@@ -15,7 +15,7 @@
 .ml(@margin-left){margin-left:@margin-left;}
 .mr(@margin-right){margin-right:@margin-right;}
 
-.padding(@padding){padding:@padding;}
+.padding(@padding:0){padding:@padding;}
 .padding(@top,@right){padding:@top @right @top @right;}
 .padding(@top,@right,@bottom){padding:@top @right @bottom @right;}
 .padding(@top,@right,@bottom,@left){padding:@arguments;}
@@ -29,10 +29,10 @@
 .posr{position:relative;}
 .posa{position:absolute;}
 .posf{position:fixed;}
-.top(@top){top:@top;}
-.right(@right){right:@right;}
-.bottom(@bottom){bottom:@bottom;}
-.left(@left){left:@left;}
+.top(@top:0){top:@top;}
+.right(@right:0){right:@right;}
+.bottom(@bottom:0){bottom:@bottom;}
+.left(@left:0){left:@left;}
 
 // font-style font-variant font-weight font-size/line-height font-family
 .font(@font){font:@font}
@@ -74,14 +74,14 @@
 .text-shadow(@shadow,@color:@black){text-shadow:@shadow @shadow @shadow @color;}
 .text-shadow(@hv,@blur,@color){text-shadow:@hv @hv @blur @color;}
 .text-shadow(@h,@v,@blur,@color){text-shadow:@arguments;}
+.text-overflow{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.ov-h{overflow:hidden;}
+.ov-a{overflow:auto;}
 
 .dis{display:block;}
 .undis{display:none;}
 .dis-ib{display:inline-block;}
 .dis-i{display:inline;}
-
-.ov-h{overflow:hidden;}
-.ov-a{overflow:auto;}
 .v-v{visibility:visible;}
 .v-h{visibility:hidden;}
 
@@ -101,7 +101,7 @@
 .border(@b1,@ss,@cc){border:@arguments;}
 .outline(@outline){outline:@outline;}
 //border-radius
-.radius(@radius){border-radius:@radius;}
+.radius(@radius:5px){border-radius:@radius;}
 .radius(@topleft,@topright){border-radius:@topleft @topright @topleft @topright;}
 .radius(@topleft,@topright,@bottomleft){border-radius:@topleft @topright @bottomright @topright;}
 .radius(@topleft,@topright,@bottomleft,@bottomright){border-radius:@arguments;}
@@ -129,6 +129,9 @@
 .transform(@transform){transform:@transform;}
 .rotate(@degrees) {transform: rotate(@degrees);}
 .scale(@ratio) {transform: scale(@ratio);}
+.translate(@x, @y){transform: translate(@x, @y);}
+.translateX(@x){transform:translate(@x);}
+.translateY(@y){transform:translate(@y);}
 
 /*.w统一宽度980*/
 .w{.margin(0,auto);.width(@wwidth);}
