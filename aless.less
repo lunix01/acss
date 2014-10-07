@@ -147,6 +147,9 @@
 .w{.margin(0,auto);.width(@wwidth);}
 .w(@wwwidth){.margin(0,auto);.width(@wwwidth);}
 
+.screen(@height:auto){.w-h(100%,@height);}
+.banner(@banner-height,@banner-bg){.w-h(100%,@banner-height);.background(@banner-bg);}
+
 .table(@backgroundcolor:#FFF,@bordercolor:#DDD,@text-align:left,@borderw:1px){
 	.width(100%);.background(@backgroundcolor);
 	th,td{.padding(8px);.border(@borderw,solid,@bordercolor);.text-align(@text-align);}
