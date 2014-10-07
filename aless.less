@@ -47,12 +47,11 @@
 
 // font-style font-variant font-weight font-size/line-height font-family
 .font(@font){font:@font}
+.ff(@ff){font-family:@ff;}
+.ff-cn(){font-family:"Hiragino Sans GB","宋体","华文细黑";}
 .ff-en(){font-family:tahoma,verdana,"Helvetica Neue",helvetica,arial,sans-serif;}
 .ff-serif(){font-family:georgia,Garamond,"Times New Roman",Times,serif;}
-.ff-cn(){font-family:"Hiragino Sans GB","宋体","华文细黑";}
-.ff(@ff){font-family:@ff;}
-.fz-em{.fz(0.83em);.line-height(1.2);}
-.fz-px{.fz(14px);.line-height(16px);}
+.fz{.fz(14px);.line-height(16px);}
 .fz(@size){font-size:@size;}
 //font-style
 .fsn(){font-style:normal;}
