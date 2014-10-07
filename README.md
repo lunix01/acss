@@ -12,7 +12,7 @@
 
 ###使用示例
     暂无！懂css，less，看aless源码应该可以直接上手的。
-    关于字体，中文修改reset.less里的body{.ff-en();.fz-em;}的.ff-en()为.ff-cn()。
+    关于字体，中文修改reset.less里的body{.ff-en();.fz;}的.ff-en()为.ff-cn()。
 
 ###关于aless的一点说明：
     有关css3属性内容，本框架不对各浏览器前缀做处理。为标准，为未来。
