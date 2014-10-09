@@ -6,11 +6,12 @@
   &:after{.dis;.fz(0);.height(0);.v-h;content:" ";clear:both;}
 }
 
-.margin(@margin:0 auto){margin:@margin;}
+.margin(@margin:0){margin:@margin;}
+.center{margin:0 auto;}
 .margin(@top,@right){margin:@top @right @top @right;}
 .margin(@top,@right,@bottom){margin:@top @right @bottom}
 .margin(@top,@right,@bottom,@left){margin:@arguments;}
-.m(@margin:0 auto){margin:@margin;}
+.m(@margin:0){margin:@margin;}
 .m(@top,@right){margin:@top @right @top @right;}
 .m(@top,@right,@bottom){margin:@top @right @bottom}
 .m(@top,@right,@bottom,@left){margin:@arguments;}
@@ -52,6 +53,7 @@
 .ff-en(){font-family:tahoma,verdana,"Helvetica Neue",helvetica,arial,sans-serif;}
 .ff-serif(){font-family:georgia,Garamond,"Times New Roman",Times,serif;}
 .fz{.fz(14px);.line-height(16px);}
+.fz-em{.fz(.83em);.line-height(16px);}
 .fz(@size){font-size:@size;}
 //font-style
 .fsn(){font-style:normal;}
@@ -144,8 +146,8 @@
 .translateY(@y){transform:translate(@y);}
 
 /*.w统一宽度1000*/
-.w{.margin(0,auto);.width(@wwidth);}
-.w(@wwwidth){.margin(0,auto);.width(@wwwidth);}
+.w{.center;.width(@wwidth);}
+.w(@wwwidth){.center;.width(@wwwidth);}
 
 .screen(@height:auto){.w-h(100%,@height);}
 .banner(@banner-height,@banner-bg){.w-h(100%,@banner-height);.background(@banner-bg);}
