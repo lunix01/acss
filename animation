@@ -1,0 +1,30 @@
+// 用法示例：.moveTop{.hoverMoveY();}
+
+.hoverMoveX(@translateX:-5px){
+  .transition(transform,0.3s,linear,0s);
+  -moz-transition: -moz-transform 0.3s linear 0s;
+  -webkit-transition: -webkit-transform 0.3s linear 0s;
+  -o-transition: -o-transform 0.3s linear 0s;
+  -ms-transition: -ms-transform 0.3s linear 0s;
+  &:hover{
+    .transform(translateX(@translateX));
+    -moz-transform:translateX(@translateX);
+    -webkit-transform:translateX(@translateX);
+    -o-transform:translateX(@translateX);
+    -ms-transform:translateX(@translateX);
+  }
+}
+.hoverMoveY(@translateY:-5px){
+  .transition(transform,0.3s,linear,0s);
+  -moz-transition: -moz-transform 0.3s linear 0s;
+  -webkit-transition: -webkit-transform 0.3s linear 0s;
+  -o-transition: -o-transform 0.3s linear 0s;
+  -ms-transition: -ms-transform 0.3s linear 0s;
+  &:hover{
+    .transform(translateY(@translateY));
+    -moz-transform:translateY(@translateY);
+    -webkit-transform:translateY(@translateY);
+    -o-transform:translateY(@translateY);
+    -ms-transform:translateY(@translateY);
+  }
+}
