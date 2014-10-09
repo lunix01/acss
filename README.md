@@ -9,10 +9,12 @@
     @import "aless/aless";
     或
     @import "aless/aless.less";
+    说明：animate.less是单独出来的，如需使用请单独引用。
 
 ###使用示例
     暂无！懂css，less，看aless源码应该可以直接上手的。
-    关于字体，中文修改reset.less里的body{.ff-en();.fz;}的.ff-en()为.ff-cn()。
+    关于字体，中文修改reset.less里的body{.ff-en();.fz-em;}的.ff-en()为.ff-cn()。
 
-###关于aless的一点说明：
+###关于aless的几点说明：
     有关css3属性内容，本框架不对各浏览器前缀做处理。为标准，为未来。
+    关于animate.less里的浏览器前缀，暂时保留。
