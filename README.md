@@ -9,7 +9,7 @@
     @import "aless/aless";
     或
     @import "aless/aless.less";
-    说明：animate.less是单独出来的，如需使用请单独引用。
+    说明：animate.less是单独出来的，但依赖aless，如需使用请另外再引用。
 
 ###使用示例
     暂无！懂css，less，看aless源码应该可以直接上手的。
