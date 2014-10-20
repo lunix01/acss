@@ -28,3 +28,23 @@
     -webkit-transform:scale(@x,@y);
   }
 }
+.hoverZoomX(@x:1.03){
+  .transition(transform,0.3s,linear,0s);
+  -moz-transition: -moz-transform 0.3s linear 0s;
+  -webkit-transition: -webkit-transform 0.3s linear 0s;
+  &:hover{
+    .transform(scaleX(@x));
+    -moz-transform:scaleX(@x);
+    -webkit-transform:scaleX(@x);
+  }
+}
+.hoverZoomY(@y:1.03){
+  .transition(transform,0.3s,linear,0s);
+  -moz-transition: -moz-transform 0.3s linear 0s;
+  -webkit-transition: -webkit-transform 0.3s linear 0s;
+  &:hover{
+    .transform(scaleY(@y));
+    -moz-transform:scaleY(@y);
+    -webkit-transform:scaleY(@y);
+  }
+}
