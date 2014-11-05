@@ -7,8 +7,8 @@
 }
 .clear{clear:both;}
 
+.center(){margin:0 auto;}
 .margin(@margin:0){margin:@margin;}
-.center{margin:0 auto;}
 .margin(@top,@right){margin:@top @right @top @right;}
 .margin(@top,@right,@bottom){margin:@top @right @bottom}
 .margin(@top,@right,@bottom,@left){margin:@arguments;}
@@ -146,9 +146,9 @@
 .translateX(@x){transform:translate(@x);}
 .translateY(@y){transform:translate(@y);}
 
-/*.w统一宽度1000*/
-.w{.center;.width(@wwidth);}
-.w(@wwwidth){.center;.width(@wwwidth);}
+/*.w统一宽度@wwidth */
+.w{.center();.width(@wwidth);}
+.w(@wwwidth){.center();.width(@wwwidth);}
 
 .screen(@height:auto){.w-h(100%,@height);}
 .banner(@banner-height,@banner-bg){.w-h(100%,@banner-height);.background(@banner-bg);}
