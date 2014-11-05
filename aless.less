@@ -75,6 +75,7 @@
 
 .line-height(@height){line-height:@height;}
 .line-height(@height,@lineheight){height:@height;line-height:@lineheight;}
+.vertical(@height){height:@height;line-height:@height;}
 
 .width(@width){width:@width;}
 .height(@height){height: @height;}
@@ -106,11 +107,14 @@
 .v-h(){visibility:hidden;}
 
 .list-style(@type:disc,@position:outside,@image:none,){list-style:@arguments;}
+.bg(@bg:@white){background:@bg}
 .background(@bg){background:@bg}
 .opacity(@opacity){opacity:@opacity}
+.z(@z){z-index:@z}
 .z-index(@c){z-index:@c}
-.cursor(@cursor){cursor:@cursor;}
 .pointer(){cursor:pointer;}
+.hand(){.pointer();}
+.cursor(@cursor){cursor:@cursor;}
 .vam(){vertical-align:middle;}
 .vat(){vertical-align:top;}
 .vab(){vertical-align:bottom;}
