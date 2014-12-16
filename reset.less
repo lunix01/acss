@@ -1,21 +1,20 @@
-@import "aless";
-
 @charset "utf-8";
 html,body{.height(100%);}
 html,body,div,span,a,img,dl,dt,dd,ul,ol,li,p,h1,h2,h3,h4,h5,h6,iframe,q,blockquote,pre,code,var,address,
   cite,ins,del,em,strong,big,small,b,i,form,button,input,textarea,th,td,
   label,fieldset,legend{.m(0);.p(0);.border(0,none);.outline(0);}
 :focus{.outline(0);} 
-body{.ff-en();.fz-em();}
-ul,ol,li{.list-style(none)}
-h1,h2,h3,h4,h5,h6{.fz-em();.fwn();}
+body{.ff-en();.fz();}
+ul,ol,li{.ls(none)}
+h1,h2,h3,h4,h5,h6{.fz();.fwn();}
 img{.vam();}
 iframe{.dis();}
 table{border-collapse:collapse;border-spacing:0;}
 legend{.p(0,4px,6px);}
 fieldset{.p(8px);}
-input,select,option,button{.p(2px,5px);.vam();}
+input,button,select,option{.p(5px);.vam();.fz();}
 a{
 	&:link,&:visited{.tdn();}
 	&:hover{.tdu();}
 }
+.w{.cl();}
