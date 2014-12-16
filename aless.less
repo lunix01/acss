@@ -33,8 +33,10 @@
 //float clear
 .fl(){float:left;}
 .fr(){float:right;}
-.clear{clear:both;}
-.clearfix{
+.float(@float:left){float:@float;}
+.cl(){.clearfix()}
+.clear(){.clearfix()}
+.clearfix(){
   .dis();zoom:1;
   &:after{.dis();.fz(0);.height(0);.v-h();content:"";clear:both;}
 }
@@ -188,8 +190,8 @@
 .translateY(@y){transform:translate(@y);}
 
 /*.w统一宽度@wwidth*/
-.w{.center();.width(@wwidth);}
-.w(@wwwidth){.center();.width(@wwwidth);}
+.w{.center();.width(@wwidth);.cl();}
+.w(@wwwidth){.center();.width(@wwwidth);.cl();}
 
 .screen(@height:auto){.w-h(100%,@height);}
 .banner(@banner-height,@banner-bg){.w-h(100%,@banner-height);.bg(@banner-bg);}
