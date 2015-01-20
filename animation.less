@@ -58,3 +58,20 @@
     -webkit-transform:scaleY(@y);
   }
 }
+.pulse(@scale1:0.9,@scale2:1,@time:0.8s){
+  .animation(pulse @time infinite;);
+  -webkit-animation:pulse @time infinite;
+  -moz-animation:pulse @time infinite;
+  @keyframes pulse{
+      0%{transform:scale(@scale1);}
+      100%{transform:scale(@scale2);}
+  }
+  @-webkit-keyframes pulse{
+      0%{-webkit-transform:scale(@scale1);}
+      100%{-webkit-transform:scale(@scale2);}
+  }
+  @-moz-keyframes pulse{
+      0%{-moz-transform:scale(@scale1);}
+      100%{-moz-transform:scale(@scale2);}
+  }
+}
