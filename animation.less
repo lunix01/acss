@@ -1,47 +1,57 @@
-.hoverMoveX(@translateX:-5px){
-  .transition(transform,0.3s,linear,0s);
-  -moz-transition: -moz-transform 0.3s linear 0s;
-  -webkit-transition: -webkit-transform 0.3s linear 0s;
+.hoverMove(@translateX:-5px,@translateY:@translateX,@times:0.3s){
+  .transition(transform,@times,linear,0s);
+  -moz-transition: -moz-transform @times linear 0s;
+  -webkit-transition: -webkit-transform @times linear 0s;
+  &:hover{
+    .transform(translate(@translateX,@translateY));
+    -moz-transform:translate(@translateX,@translateY);
+    -webkit-transform:translate(@translateX,@translateY);
+  }
+}
+.hoverMoveX(@translateX:-5px,@times:0.3s){
+  .transition(transform,@times,linear,0s);
+  -moz-transition: -moz-transform @times linear 0s;
+  -webkit-transition: -webkit-transform @times linear 0s;
   &:hover{
     .transform(translateX(@translateX));
     -moz-transform:translateX(@translateX);
     -webkit-transform:translateX(@translateX);
   }
 }
-.hoverMoveY(@translateY:-5px){
-  .transition(transform,0.3s,linear,0s);
-  -moz-transition: -moz-transform 0.3s linear 0s;
-  -webkit-transition: -webkit-transform 0.3s linear 0s;
+.hoverMoveY(@translateY:-5px,@times:0.3s){
+  .transition(transform,@times,linear,0s);
+  -moz-transition: -moz-transform @times linear 0s;
+  -webkit-transition: -webkit-transform @times linear 0s;
   &:hover{
     .transform(translateY(@translateY));
     -moz-transform:translateY(@translateY);
     -webkit-transform:translateY(@translateY);
   }
 }
-.hoverZoom(@x:1.02,@y:@x){
-  .transition(transform,0.3s,linear,0s);
-  -moz-transition: -moz-transform 0.3s linear 0s;
-  -webkit-transition: -webkit-transform 0.3s linear 0s;
+.hoverZoom(@x:1.03,@y:@x,@times:0.3s){
+  .transition(transform,@times,linear,0s);
+  -moz-transition: -moz-transform @times linear 0s;
+  -webkit-transition: -webkit-transform @times linear 0s;
   &:hover{
     .transform(scale(@x,@y));
     -moz-transform:scale(@x,@y);
     -webkit-transform:scale(@x,@y);
   }
 }
-.hoverZoomX(@x:1.03){
-  .transition(transform,0.3s,linear,0s);
-  -moz-transition: -moz-transform 0.3s linear 0s;
-  -webkit-transition: -webkit-transform 0.3s linear 0s;
+.hoverZoomX(@x:1.03,@times:0.3s){
+  .transition(transform,@times,linear,0s);
+  -moz-transition: -moz-transform @times linear 0s;
+  -webkit-transition: -webkit-transform @times linear 0s;
   &:hover{
     .transform(scaleX(@x));
     -moz-transform:scaleX(@x);
     -webkit-transform:scaleX(@x);
   }
 }
-.hoverZoomY(@y:1.03){
-  .transition(transform,0.3s,linear,0s);
-  -moz-transition: -moz-transform 0.3s linear 0s;
-  -webkit-transition: -webkit-transform 0.3s linear 0s;
+.hoverZoomY(@y:1.03,@times:0.3s){
+  .transition(transform,@times,linear,0s);
+  -moz-transition: -moz-transform @times linear 0s;
+  -webkit-transition: -webkit-transform @times linear 0s;
   &:hover{
     .transform(scaleY(@y));
     -moz-transform:scaleY(@y);
