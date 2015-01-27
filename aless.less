@@ -151,11 +151,22 @@
 .text-shadow(@h,@v,@blur,@color){text-shadow:@arguments;}
 .text-overflow{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 
-/*border*/
+//border
 .border(@border){border:@border;}
-.border(@b1,@ss){border:@b1 @ss;}
+.border(@b1,@ss){border:@b1 @ss;}  //.border(0,none);
 .border(@b1,@ss,@cc){border:@arguments;}
+.border-style(@borders){border-style:@borders}
 .outline(@outline){outline:@outline;}
+.outline-offset(@length:inherit){outline-offset:@length;}
+//border top right bottom left
+.border-t(@border){border-top:@border;}
+.border-t(@b1,@ss,@cc:transparent){border-top:@arguments;}
+.border-r(@border){border-right:@border;}
+.border-r(@b1,@ss,@cc:transparent){border-right:@arguments;}
+.border-b(@border){border-bottom:@border;}
+.border-b(@b1,@ss,@cc:transparent){border-bottom:@arguments;}
+.border-l(@border){border-left:@border;}
+.border-l(@b1,@ss,@cc:transparent){border-left:@arguments;}
 //border-radius
 .radius(@radius:5px){border-radius:@radius;}
 .radius(@topleft,@topright){border-radius:@topleft @topright @topleft @topright;}
@@ -174,7 +185,7 @@
 .radius-l(@topl,@bottoml){border-top-left-radius:@topl;border-bottom-left-radius:@bottoml;}
 .radius-r(@right){border-top-right-radius:@right;border-bottom-right-radius:@right;}
 .radius-r(@topr,@bottomr){border-top-right-radius:@topr;border-bottom-right-radius:@bottomr;}
-
+//box-shadow: 投影方式(inset) X轴偏移量 Y轴偏移量 阴影模糊半径 阴影扩展半径 阴影颜色;
 .box-shadow(@bsxy,@bs,@bsc){box-shadow:@bsxy @bsxy @bs @bsc;}
 .box-shadow(@bsxy,@bs1,@bs2,@bsc){box-shadow:@bsxy @bsxy @bs1 @bs2 @bsc;}
 .box-shadow(@bsx,@bsy,@bs,@bsc){box-shadow:@arguments;}
