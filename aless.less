@@ -70,9 +70,9 @@
 .min-h(@min-h){min-height:@min-h;}
 .max-w(@max-w){max-width:@max-w;}
 .max-h(@max-h){max-height:@max-h;}
-.lh(@height){line-height:@height;}
+.lh(@height:1){line-height:@height;}
 .lh(@height,@lineheight){height:@height;line-height:@lineheight;}
-.line-height(@height){line-height:@height;}
+.line-height(@height:1){line-height:@height;}
 .line-height(@height,@lineheight){height:@height;line-height:@lineheight;}
 .vertical(@height){height:@height;line-height:@height;}
 
@@ -106,32 +106,32 @@
 .ff(@ff){font-family:@ff;}
 .ff-cn(){font-family:"Hiragino Sans GB","WenQuanYi Micro Hei","宋体","Arial Narrow","华文细黑",helvetica;}
 .ff-en(){font-family:tahoma,verdana,"Helvetica Neue",helvetica,arial,sans-serif;}
-.ff-serif(){font-family:georgia,Garamond,"Times New Roman",Times,serif;}  //数字大小起伏，参差不齐效果字体 georgia
+//.ff-serif(){font-family:georgia,Garamond,"Times New Roman",Times,serif;}  //数字大小起伏，参差不齐效果字体 georgia
+//font-size
+.fz(@size:100%){font-size:@size;}
+.fz-rem(){.fz(1rem);}
 //font-color
+.c(@colorv:@black){color:@colorv;}
 .color(@colorv:@white){color:@colorv;}
 .white(){color:@white;}
 .black(){color:@black;}
 .gray(){color:@gray;}
-//font-size
-.fz(){.fz(14px);.line-height(16px);}
-.fz-em(){.fz(.83em);.line-height(1.6);}
-.fz(@size){font-size:@size;}
+//font-style
+.fsn(){font-style:normal;}
+.fsi(){font-style:italic;}
+.fso(){font-style:oblique;}
 //font-weight
 .fw(@fw){font-weight:@fw;}
 .fwn(){font-weight:normal;}
 .fwb(){.bold();}
 .bold(){font-weight:bold;}
 .strong(){.bold();}
-//font-style
-.fsn(){font-style:normal;}
-.fsi(){font-style:italic;}
-.fso(){font-style:oblique;}
 
 //text-align
 .tal(){text-align:left;}
 .tac(){text-align:center;}
 .tar(){text-align:right;}
-.taj(){text-align:justify;}
+//.taj(){text-align:justify;}
 .ta(@text-align:left){text-align:@text-align;}
 //text-decoration
 .tdn(){text-decoration:none;}
