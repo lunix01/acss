@@ -16,6 +16,6 @@
     关于字体，中文修改reset.less里的body{.ff-en();}的.ff-en()为.ff-cn()。
 
 ###关于aless的几点说明：
-    reset.less里有fieldset，legend，input,button,select,option的padding设置，需要注意。
+    reset.less里有fieldset，legend的padding设置，需要注意。
     有关css3属性内容，本框架不对各浏览器前缀做处理。为标准，为未来。
     关于animate.less里的浏览器前缀，暂时保留，但仅处理-moz-，-webkit-。
