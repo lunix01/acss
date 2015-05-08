@@ -42,12 +42,12 @@
 }
 
 //position
-.pr(){position:relative;}
 .posr(){position:relative;}
-.pa(){position:absolute;}
 .posa(){position:absolute;}
-.pf(){position:fixed;}
 .posf(){position:fixed;}
+.poss(){position:sticky;}
+.pos(@pos:relative){position:@pos;}
+.position(@pos:relative){position:@pos;}
 .t(@top:0){top:@top;}
 .r(@right:0){right:@right;}
 .b(@bottom:0){bottom:@bottom;}
@@ -56,12 +56,11 @@
 .right(@right:0){right:@right;}
 .bottom(@bottom:0){bottom:@bottom;}
 .left(@left:0){left:@left;}
-.ps(){position:sticky;}
-.poss(){position:sticky;}
 .sticky(@top:0){position:sticky;.t(@top);}
-.position(@position:relative){position:@position;}
 
 //width height line-height
+.w(@w:100%){width:@w;}
+.h(@h:auto){height:@h;}
 .width(@width:0){width:@width;}
 .height(@height:0){height: @height;}
 .w-h(@w-h){width:@w-h;height:@w-h;}
@@ -89,6 +88,7 @@
 .v-h(){visibility:hidden;}
 
 .bg(@bg:@white){background:@bg}
+.bgp(@x:0,@y:0){background-position: @x @y;};
 .background(@background){background:@background}
 .ls(@type:disc,@position:outside,@image:none,){list-style:@arguments;}
 .list-style(@type:disc,@position:outside,@image:none,){list-style:@arguments;}
@@ -149,6 +149,9 @@
 .ov-a(){overflow:auto;}
 .ov-s(){overflow:scrollbar;}
 //text-shadow
+.tsh(@shadow,@color:@black){text-shadow:@shadow @shadow @shadow @color;}
+.tsh(@hv,@blur,@color){text-shadow:@hv @hv @blur @color;}
+.tsh(@h,@v,@blur,@color){text-shadow:@arguments;}
 .text-shadow(@shadow,@color:@black){text-shadow:@shadow @shadow @shadow @color;}
 .text-shadow(@hv,@blur,@color){text-shadow:@hv @hv @blur @color;}
 .text-shadow(@h,@v,@blur,@color){text-shadow:@arguments;}
@@ -189,6 +192,10 @@
 .radius-r(@right){border-top-right-radius:@right;border-bottom-right-radius:@right;}
 .radius-r(@topr,@bottomr){border-top-right-radius:@topr;border-bottom-right-radius:@bottomr;}
 //box-shadow: 投影方式(inset) X轴偏移量 Y轴偏移量 阴影模糊半径 阴影扩展半径 阴影颜色;
+.bxsh(@bsxy,@bs,@bsc){box-shadow:@bsxy @bsxy @bs @bsc;}
+.bxsh(@bsxy,@bs1,@bs2,@bsc){box-shadow:@bsxy @bsxy @bs1 @bs2 @bsc;}
+.bxsh(@bsx,@bsy,@bs,@bsc){box-shadow:@arguments;}
+.bxsh(@bsx,@bsy,@bs1,@bs2,@bsc){box-shadow:@arguments;}
 .box-shadow(@bsxy,@bs,@bsc){box-shadow:@bsxy @bsxy @bs @bsc;}
 .box-shadow(@bsxy,@bs1,@bs2,@bsc){box-shadow:@bsxy @bsxy @bs1 @bs2 @bsc;}
 .box-shadow(@bsx,@bsy,@bs,@bsc){box-shadow:@arguments;}
@@ -205,8 +212,8 @@
 
 /*.w统一宽度@wwidth*/
 .w{.center();.width(@wwidth);.cl();}
-.w(@wwwidth){.center();.width(@wwwidth);.cl();}
 
+.ww(@width:@wwidth){.center();.width(@width);.cl();}
 .screen(@height:auto){.w-h(100%,@height);}
 .banner(@banner-height,@banner-bg){.w-h(100%,@banner-height);.bg(@banner-bg);}
 
