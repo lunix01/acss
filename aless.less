@@ -210,13 +210,25 @@
 .translateX(@x){transform:translate(@x);}
 .translateY(@y){transform:translate(@y);}
 
+//grid
+.grid-1(){.w(8.33333333%)}
+.grid-2(){.w(16.66666667%}
+.grid-3(){.w(25%)}
+.grid-4(){.w(33.33333333%)}
+.grid-5(){.w(41.66666667%)}
+.grid-6(){.w(50%)}
+.grid-7(){.w(58.33333333%)}
+.grid-8(){.w(66.66666667%)}
+.grid-9(){.w(75%)}
+.grid-10(){.w(83.33333333%)}
+.grid-11(){.w(91.66666667%)}
+.grid-12(){.w(100%)}
+
 /*.w统一宽度@wwidth*/
 .w{.center();.width(@wwidth);.cl();}
-
 .ww(@width:@wwidth){.center();.width(@width);.cl();}
 .screen(@height:auto){.w-h(100%,@height);}
 .banner(@banner-height,@banner-bg){.w-h(100%,@banner-height);.bg(@banner-bg);}
-
 .table(@backgroundcolor:#FFF,@bordercolor:#a5d0f7,@text-align:left,@borderw:1px){
 	.width(100%);.bg(@backgroundcolor);
 	th,td{.p(6px);.border(@borderw,solid,@bordercolor);.ta(@text-align);}
