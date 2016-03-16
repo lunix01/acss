@@ -17,5 +17,4 @@
 
 ###关于aless的几点说明：
     reset.less里有fieldset，legend的padding设置，需要注意。
-    有关css3属性内容，本框架不对各浏览器前缀做处理。为标准，为未来。
-    关于animate.less里的浏览器前缀，暂时保留，但仅处理-moz-，-webkit-。
+    有关css3属性内容，本框架不对各浏览器前缀做处理。为标准，为未来。如果需要，可以自行用autoprefixer进行处理。
