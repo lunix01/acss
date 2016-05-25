@@ -8,6 +8,7 @@
     @import "aless/aless";
     或 @import "aless/aless.less";
     说明：reset.less，animation.less，effect.less是单独出来的，但都需要先依赖aless，如需使用请另外再引用。
+        print.less也是单独出来的，无需依赖aless，如需使用请另外再引用。
 
 ###使用示例
     暂无！懂css，less，如果你用过emmet（http://docs.emmet.io/cheat-sheet/）更佳，直接看aless源码咯。
