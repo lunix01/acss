@@ -1,5 +1,5 @@
 #aless
-    一个小小的less库。只为更简洁的写less、css，尽可能实用，更佳实践！
+    一个小小less mixins, less lib。只为更简洁方便的写less（css），尽可能实用，更佳实践！
 
 ###bower
     如：bower install aless
