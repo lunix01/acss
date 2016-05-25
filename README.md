@@ -1,13 +1,13 @@
 #aless
+    https://github.com/lunix01/aless
     一个小小less mixins, less lib。只为更简洁方便的写less（css），尽可能实用，更佳实践！
-
 ###bower
     如：bower install aless
 
 ###引用示例
     @import "aless/aless";
     或 @import "aless/aless.less";
-    说明：reset.less，animation.less，effect.less是单独出来的，但依赖aless，如需使用请另外再引用。
+    说明：reset.less，animation.less，effect.less是单独出来的，但都需要先依赖aless，如需使用请另外再引用。
 
 ###使用示例
     暂无！懂css，less，如果你用过emmet（http://docs.emmet.io/cheat-sheet/）更佳，直接看aless源码咯。

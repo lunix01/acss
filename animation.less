@@ -1,42 +1,42 @@
 .hoverMove(@translateX:-5px,@translateY:@translateX,@times:0.3s){
   &:hover{
-    .transition(transform,@times,linear,0s);
-    .transform(translate(@translateX,@translateY));
+    .trs(transform,@times,linear,0s);
+    .trs(translate(@translateX,@translateY));
   }
 }
 .hoverMoveX(@translateX:-5px,@times:0.3s){
   &:hover{
-    .transition(transform,@times,linear,0s);
-    .transform(translateX(@translateX));
+    .trs(transform,@times,linear,0s);
+    .trf(translateX(@translateX));
   }
 }
 .hoverMoveY(@translateY:-5px,@times:0.3s){
   &:hover{
-    .transition(transform,@times,linear,0s);
-    .transform(translateY(@translateY));
+    .trs(transform,@times,linear,0s);
+    .trf(translateY(@translateY));
   }
 }
 .hoverZoom(@x:1.03,@y:@x,@times:0.3s){
   &:hover{
-    .transition(transform,@times,linear,0s);
-    .transform(scale(@x,@y));
+    .trs(transform,@times,linear,0s);
+    .trf(scale(@x,@y));
   }
 }
 .hoverZoomX(@x:1.03,@times:0.3s){
   &:hover{
-    .transition(transform,@times,linear,0s);
-    .transform(scaleX(@x));
+    .trs(transform,@times,linear,0s);
+    .trf(scaleX(@x));
   }
 }
 .hoverZoomY(@y:1.03,@times:0.3s){
   &:hover{
-    .transition(transform,@times,linear,0s);
-    .transform(scaleY(@y));
+    .trs(transform,@times,linear,0s);
+    .trf(scaleY(@y));
   }
 }
 .hoverBounce(@y1:-10px,@y2:@y1/2){
   &:hover{
-    .animation(bounce  1s .2s ease both);
+    .anim(bounce  1s .2s ease both);
     @keyframes bounce {  
       0%,20%,40%,50%,100%{transform:translateY(0);}
       10%{transform:translateY(@y1);}
@@ -45,7 +45,7 @@
   }
 }
 .pulse(@scale1:0.9,@scale2:1,@time:0.8s){
-  .animation(pulse @time infinite;);
+  .anim(pulse @time infinite;);
   @keyframes pulse{
     0%{transform:scale(@scale1);}
     100%{transform:scale(@scale2);}
