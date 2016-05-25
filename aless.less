@@ -1,7 +1,6 @@
 @import "var";
 @import "reset";
 
-// Visual Formatting
 // position
 .pos(@pos:relative){position:@pos;}
 .posr(){.pos()}
@@ -236,8 +235,8 @@
 .screen(@height:auto){.size(100%,@height);}
 .banner(@banner-height,@banner-bg){.size(100%,@banner-height);.bg(@banner-bg);}
 .table(@backgroundcolor:#FFF,@bordercolor:#a5d0f7,@text-align:left,@borderw:1px){
-	.width(100%);.bg(@backgroundcolor);
-	th,td{.p(6px);.border(@borderw,solid,@bordercolor);.ta(@text-align);}
+	.w(100%);.bg(@backgroundcolor);
+	th,td{.p(6px);.bd(@borderw,solid,@bordercolor);.ta(@text-align);}
 	thead tr,th{.bg(#f0f8f0);.bold();.c(#000);}
 }
 .code(@backgroundcolor:#333,@textcolor:#FFF,@fz:16px,@radius:5px){.p(6px);.w(100%);.bg(@backgroundcolor);.c(@textcolor);.radius(@radius);.dis();.fz(@fz);}
