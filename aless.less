@@ -11,10 +11,6 @@
 .mr(@right:0){margin-right:@arguments;}
 .mb(@bottom:0){margin-bottom:@arguments;}
 .ml(@left:0){margin-left:@arguments;}
-.margin(@margin:0){margin:@margin;}
-.margin(@top,@right){margin:@top @right @top @right;}
-.margin(@top,@right,@bottom){margin:@top @right @bottom}
-.margin(@top,@right,@bottom,@left){margin:@arguments;}
 
 //padding
 .p(@padding:0){padding:@padding;}
@@ -25,15 +21,10 @@
 .pr(@right:0){padding-right:@arguments;}
 .pb(@bottom:0){padding-bottom:@arguments;}
 .pl(@left:0){padding-left:@arguments;}
-.padding(@padding:0){padding:@padding;}
-.padding(@top,@right){padding:@top @right @top @right;}
-.padding(@top,@right,@bottom){padding:@top @right @bottom @right;}
-.padding(@top,@right,@bottom,@left){padding:@arguments;}
 
 //float clear
 .fl(){float:left;}
 .fr(){float:right;}
-.float(@float:left){float:@float;}
 .cl(){.clearfix()}
 .clear(){.clearfix()}
 .clearfix(){
@@ -47,22 +38,15 @@
 .posf(){position:fixed;}
 .poss(){position:sticky;}
 .pos(@pos:relative){position:@pos;}
-.position(@pos:relative){position:@pos;}
 .t(@top:0){top:@top;}
 .r(@right:0){right:@right;}
 .b(@bottom:0){bottom:@bottom;}
 .l(@left:0){left:@left;}
-.top(@top:0){top:@top;}
-.right(@right:0){right:@right;}
-.bottom(@bottom:0){bottom:@bottom;}
-.left(@left:0){left:@left;}
 .sticky(@top:0){position:sticky;.t(@top);}
 
 //width height line-height
 .w(@w:100%){width:@w;}
 .h(@h:auto){height:@h;}
-.width(@width:0){width:@width;}
-.height(@height:0){height: @height;}
 .w-h(@w-h){width:@w-h;height:@w-h;}
 .w-h(@width,@height){width:@width;height:@height;}
 .size(@w-h){.w-h(@w-h)};
@@ -73,8 +57,6 @@
 .max-h(@max-h){max-height:@max-h;}
 .lh(@height:1){line-height:@height;}
 .lh(@height,@lineheight){height:@height;line-height:@lineheight;}
-.line-height(@height:1){line-height:@height;}
-.line-height(@height,@lineheight){height:@height;line-height:@lineheight;}
 .vertical(@height){height:@height;line-height:@height;}
 
 //display
@@ -198,10 +180,6 @@
 .bxsh(@bsxy,@bs1,@bs2,@bsc){box-shadow:@bsxy @bsxy @bs1 @bs2 @bsc;}
 .bxsh(@bsx,@bsy,@bs,@bsc){box-shadow:@arguments;}
 .bxsh(@bsx,@bsy,@bs1,@bs2,@bsc){box-shadow:@arguments;}
-.box-shadow(@bsxy,@bs,@bsc){box-shadow:@bsxy @bsxy @bs @bsc;}
-.box-shadow(@bsxy,@bs1,@bs2,@bsc){box-shadow:@bsxy @bsxy @bs1 @bs2 @bsc;}
-.box-shadow(@bsx,@bsy,@bs,@bsc){box-shadow:@arguments;}
-.box-shadow(@bsx,@bsy,@bs1,@bs2,@bsc){box-shadow:@arguments;}
 
 .transition(@transition){transition:@transition;}
 .transition(@property,@duration,@timing,@delay){transition:@arguments;}
