@@ -7,10 +7,10 @@
 ###引用示例
     @import "aless/aless";
     或 @import "aless/aless.less";
-    说明：reset.less，animate.less，effect.less是单独出来的，但依赖aless，如需使用请另外再引用。
+    说明：reset.less，animation.less，effect.less是单独出来的，但依赖aless，如需使用请另外再引用。
 
 ###使用示例
-    暂无！懂css，less，如果你用过emmet更佳，直接看aless源码咯。
+    暂无！懂css，less，如果你用过emmet（http://docs.emmet.io/cheat-sheet/）更佳，直接看aless源码咯。
     关于字体，中文修改reset.less里的body{.ff-en();}的.ff-en()为.ff-cn()。
 
 ###关于aless的几点说明：
