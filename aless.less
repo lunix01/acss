@@ -7,22 +7,23 @@
 .posa(){.pos(absolute);}
 .posf(){.pos(fixed)}
 .poss(){.pos(sticky)}
-.t(@top:0){top:@top;}
-.r(@right:0){right:@right;}
-.b(@bottom:0){bottom:@bottom;}
-.l(@left:0){left:@left;}
-.sticky(@top:0){.pos(sticky);.t(@top);}
+.t(@t:0){top:@t;}
+.r(@r:0){right:@r;}
+.b(@b:0){bottom:@b;}
+.l(@l:0){left:@l;}
+.sticky(@t:0){.pos(sticky);.t(@t);}
 // z-index
 .z(@z){z-index:@z}
 // float clear
 .fl(){float:left;}
 .fr(){float:right;}
 .cl(@cl:both){clear:@cl}
-.clear(){.clearfix()}
-.clearfix(){
-	.dis();zoom:1;
-	&:after{.dis();.fz(0);.height(0);.v-h();content:"";clear:both;}
+.clear(){
+	.dis();.zm(1);
+	&:after{.dis();.fz(0);.h(0);.size();content:"";.cl();}
 }
+.clearfix(){.clear();}
+
 // display
 .d(@d:block){display:@d;}
 .dn(){.d(none);}
