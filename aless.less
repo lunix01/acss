@@ -102,10 +102,13 @@
 .white(){.c(@white);}
 .black(){.c(@black);}
 .gray(){.c(@gray);}
+.red(){.c(@red);}
+.green(){.c(@green);}
+.blue(){.c(@blue);}
 .op(@op){opacity:@op;}
 
 // font font-style font-variant font-weight font-size/line-height font-family
-.f(@f){font-family:@f;}
+.f(@f){font:@f;}
 //font-size
 .fz(@size:100%){font-size:@size;}
 //font-style
@@ -195,8 +198,8 @@
 .bdrsr(@topr,@bottomr){border-top-right-radius:@topr;border-bottom-right-radius:@bottomr;}
 
 .lis(@type:disc,@position:outside,@image:none){list-style:@arguments;}
-.ap(@ap){appearance:@ap}
-.us(@us){user-select:@us}
+.ap(@ap:none){appearance:@ap}
+.us(@us:none){user-select:@us}
 
 // flex
 // fxd flex-direction
@@ -252,6 +255,6 @@
 		.bg(#f0f8f0);.bold();.c(#000);
 	}
 }
-.code(@backgroundcolor:#333,@textcolor:#fff,@fz:16px,@radius:5px){
-	.p(6px);.w(100%);.bg(@backgroundcolor);.c(@textcolor);.bdrs(@radius);.dis();.fz(@fz);
+.code(@bgcolor:#333,@txtcolor:#fff,@fz:16px,@radius:5px){
+	.p(6px);.w(100%);.bg(@bgcolor);.c(@txtcolor);.bdrs(@radius);.dis();.fz(@fz);
 }
