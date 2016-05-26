@@ -115,10 +115,10 @@
 .fso(){.fs(oblique);}
 //font-weight
 .fw(@fw){font-weight:@fw;}
-.fwn(){font-weight:normal;}
-.fwb(){.bold();}
-.bold(){font-weight:bold;}
-.strong(){.bold();}
+.fwn(){.fw(normal);}
+.fwb(){.fw(bold);}
+.bold(){.fwb();}
+.strong(){.fwb();}
 //font-family
 .ff(@ff){font-family:@ff;}
 .ff-cn(){font-family:"Hiragino Sans GB","WenQuanYi Micro Hei","微软雅黑","宋体","Arial Narrow","华文细黑",helvetica;}
